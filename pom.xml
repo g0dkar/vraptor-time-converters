@@ -32,6 +32,7 @@
 	
 	<modules>
 		<module>vraptor-javatime</module>
+		<module>vraptor-jodatime</module>
 	</modules>
 	
 	<build>
