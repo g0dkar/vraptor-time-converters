@@ -1,4 +1,4 @@
-package br.com.caelum.vraptor.converter;
+package br.com.caelum.vraptor.converter.jodatime;
 
 import java.util.Collections;
 import java.util.Enumeration;
