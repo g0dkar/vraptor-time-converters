@@ -21,6 +21,7 @@ import static com.google.common.base.Strings.isNullOrEmpty;
 
 import java.util.Locale;
 
+import javax.enterprise.context.RequestScoped;
 import javax.inject.Inject;
 
 import org.joda.time.LocalDate;
@@ -38,6 +39,7 @@ import br.com.caelum.vraptor.converter.Converter;
  * @author Lucas Cavalcanti
  */
 @Convert(LocalDate.class)
+@RequestScoped
 public class LocalDateConverter implements Converter<LocalDate> {
 
 	private final Locale locale;
