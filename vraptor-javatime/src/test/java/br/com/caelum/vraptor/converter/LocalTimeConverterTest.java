@@ -25,7 +25,7 @@ public class LocalTimeConverterTest {
 
 	@Test
 	public void shouldBeAbleToConvert() {
-		assertThat(converter.convert("15:38", LocalTime.class), is(equalTo(LocalTime.of(15, 38))));
+		assertThat(converter.convert("15:38:01", LocalTime.class), is(equalTo(LocalTime.of(15, 38, 1))));
 	}
 
 	@Test

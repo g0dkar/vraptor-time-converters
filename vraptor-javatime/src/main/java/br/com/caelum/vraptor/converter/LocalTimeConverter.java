@@ -22,6 +22,7 @@ import static com.google.common.base.Strings.isNullOrEmpty;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.time.format.FormatStyle;
 import java.util.Locale;
 
 import javax.enterprise.context.RequestScoped;
@@ -67,6 +68,6 @@ public class LocalTimeConverter implements Converter<LocalTime> {
 	}
 
 	protected DateTimeFormatter getFormatter() {
-		return DateTimeFormatter.ofPattern("HH:mm", locale);
+		return DateTimeFormatter.ofLocalizedTime(FormatStyle.MEDIUM).withLocale(locale);
 	}
 }

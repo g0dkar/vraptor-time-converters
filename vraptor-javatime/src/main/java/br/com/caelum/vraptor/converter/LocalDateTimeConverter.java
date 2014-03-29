@@ -22,6 +22,7 @@ package br.com.caelum.vraptor.converter;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.time.format.FormatStyle;
 import java.util.Locale;
 
 import javax.enterprise.context.RequestScoped;
@@ -67,6 +68,6 @@ public class LocalDateTimeConverter implements Converter<LocalDateTime> {
 	}
 
 	protected DateTimeFormatter getFormatter() {
-		return DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm", locale);
+		return DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM).withLocale(locale);
 	}
 }

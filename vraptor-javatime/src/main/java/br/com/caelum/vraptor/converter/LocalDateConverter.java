@@ -22,6 +22,7 @@ import static com.google.common.base.Strings.isNullOrEmpty;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.time.format.DateTimeParseException;
+import java.time.format.FormatStyle;
 import java.util.Locale;
 
 import javax.enterprise.context.RequestScoped;
@@ -67,6 +68,6 @@ public class LocalDateConverter implements Converter<LocalDate> {
 	}
 
 	protected DateTimeFormatter getFormatter() {
-		return DateTimeFormatter.ofPattern("dd/MM/yyyy", locale);
+		return DateTimeFormatter.ofLocalizedDate(FormatStyle.MEDIUM).withLocale(locale);
 	}
 }

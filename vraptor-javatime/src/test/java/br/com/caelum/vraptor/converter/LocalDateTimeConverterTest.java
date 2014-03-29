@@ -25,8 +25,8 @@ public class LocalDateTimeConverterTest {
 
 	@Test
 	public void shouldBeAbleToConvert() {
-		assertThat(converter.convert("05/06/2010 03:38", LocalDateTime.class),
-				is(equalTo(LocalDateTime.of(2010, 6, 5, 3, 38))));
+		assertThat(converter.convert("05/06/2010 03:38:01", LocalDateTime.class),
+				is(equalTo(LocalDateTime.of(2010, 6, 5, 3, 38, 1))));
 	}
 
 	@Test
